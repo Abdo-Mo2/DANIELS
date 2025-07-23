@@ -891,7 +891,7 @@ letter-spacing: 2px;
   }
   #works .lear .headr {
     position: absolute;
-    top: 80px;
+    top: 120px;
     left: 0;
     width: 100%;
     display: flex;
@@ -900,7 +900,7 @@ letter-spacing: 2px;
   }
   #works .lear .icon-container {
     position: absolute;
-    bottom: 80px;
+    bottom: 120px;
     left: 0;
     width: 100%;
     display: flex;
@@ -909,12 +909,6 @@ letter-spacing: 2px;
     justify-content: center;
     gap: 2px !important;
     transition: bottom 0.3s;
-  }
-  #works .inner:hover .lear .headr {
-    top: 120px;
-  }
-  #works .inner:hover .lear .icon-container {
-    bottom: 120px;
   }
 }
 
