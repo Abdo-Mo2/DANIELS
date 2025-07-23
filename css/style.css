@@ -1084,33 +1084,45 @@ letter-spacing: 2px;
   }
 }
 
-/* Mobile-first: stack images and make them large by default */
-#works .row {
-  flex-direction: column;
-  gap: 16px;
-}
-#works .col-md-4 {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-bottom: 0;
-}
+@media (max-width: 576px) {
+  #works .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  #works .col-md-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 0;
+  }
+  /* Default: desktop and up to 1200px */
 #works .col-md-4 img {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: auto;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
 }
 
-/* At min-width: 576px and above, restore grid/flex row layout */
-@media (min-width: 576px) {
+@media (max-width: 768px) {
+  #works .col-md-4 img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
   #works .row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 16px;
   }
   #works .col-md-4 {
-    width: 100%;
-    max-width: unset;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 0;
+  }
+  #works .col-md-4 img {
+    width: 300px !important;
+    max-width: 100% !important;
+    display: block;
+    margin: 0 auto;
   }
 }
 
