@@ -882,7 +882,6 @@ letter-spacing: 2px;
 }
 
 @media (min-width: 576px) {
-  /* Make .lear overlay wider */
   #works .lear {
     width: 98%;
     left: 1%;
@@ -890,7 +889,6 @@ letter-spacing: 2px;
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  /* Position header and icons inside .lear */
   #works .lear .headr {
     position: absolute;
     top: 80px;
@@ -906,13 +904,12 @@ letter-spacing: 2px;
     left: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2px !important;
     transition: bottom 0.3s;
   }
-  /* On hover, push header and icons even closer to center */
   #works .inner:hover .lear .headr {
     top: 120px;
   }
