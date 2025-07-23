@@ -1060,6 +1060,14 @@ letter-spacing: 2px;
 
 /* === END PORTFOLIO SECTION ENHANCEMENTS === */
 
+/* Default: desktop and up to 1200px */
+#works .col-md-4 img {
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 #About .about-img img {
   width: 250px !important;
   max-width: 250px;
@@ -1069,7 +1077,7 @@ letter-spacing: 2px;
   margin-right: auto;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   #About .about-img img {
     width: 350px !important;
     max-width: 350px;
@@ -1078,33 +1086,12 @@ letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
+  #works .col-md-4 img {
+    width: 200px;
+  }
   #About .about-img img {
     width: 80% !important;
     max-width: 220px;
-  }
-}
-
-@media (max-width: 576px) {
-  #works .row {
-    flex-direction: column;
-    gap: 16px;
-  }
-  #works .col-md-4 {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 0;
-  }
-  /* Default: desktop and up to 1200px */
-#works .col-md-4 img {
-  width: auto;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  #works .col-md-4 img {
-    width: 200px;
   }
 }
 
@@ -1124,12 +1111,32 @@ letter-spacing: 2px;
     display: block;
     margin: 0 auto;
   }
-}
-
-@media (max-width: 576px) {
   #About .about-img img {
     width: 90% !important;
     max-width: 160px;
+  }
+}
+
+/* Navbar toggler and collapse styles */
+@media (max-width: 992px) {
+  .navbar-toggler {
+    border-color: white;
+  }
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  .navbar-collapse {
+    background: white !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+  }
+  .navbar-collapse .nav-link {
+    color: #222 !important;
+  }
+  .navbar-collapse .nav-link.active {
+    color: #000 !important;
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
