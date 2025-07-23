@@ -771,3 +771,123 @@ letter-spacing: 2px;
   color: #000;
 }
 
+/* === CSS GRID LAYOUT FOR MAIN SECTIONS === */
+
+/* About Section Grid */
+#About .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Services Section Grid */
+#services .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#services .col-md-4 {
+  width: 100%;
+  max-width: unset;
+}
+
+/* Works Section Grid */
+#works .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#works .col-md-4 {
+  width: 100%;
+  max-width: unset;
+}
+
+/* Team Section Grid */
+#team .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#team .cal {
+  width: 100%;
+  max-width: unset;
+}
+
+/* Contact Section Grid */
+#contact .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+#contact .social {
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 0;
+}
+#contact .forms {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* General container grid for future use */
+.container.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.container.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+@media (max-width: 1200px) {
+  #services .row,
+  #works .row,
+  #team .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #About .container,
+  #contact .row {
+    grid-template-columns: 1fr;
+  }
+  #services .row,
+  #works .row,
+  #team .row {
+    grid-template-columns: 1fr;
+  }
+  .about-img img {
+    width: 100% !important;
+    right: 0;
+  }
+  #contact .forms {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  .container.grid-2,
+  .container.grid-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .home-content p {
+    font-size: 32px;
+  }
+  .B1, .a1, .C1, .cu {
+    font-size: 28px;
+  }
+}
+
+/* === END CSS GRID LAYOUT === */
+
